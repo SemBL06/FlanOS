@@ -11,7 +11,8 @@ Check the documentation to see all the features!
 Build with [SSG](https://github.com/SemBL06/SSG)!
 
 # Future
-- Maybe a website to download specific drivers, scripts or modules? 
+- Maybe a website to download specific drivers, scripts or modules?
+- More drivers and modules
 
 # License
 Free for personal, educational, research, and non-commercial use.
