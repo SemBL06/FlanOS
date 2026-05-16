@@ -1,0 +1,14 @@
+# Example: send JSON data back to a server
+# Replace the URL with your own endpoint.
+
+display clear
+display print text="Posting..." x=center y=0
+
+set payload to (comm wifi scan seconds=2)
+set result to (fetch post url="http://127.0.0.1:8092/json" value=payload max_bytes=2048)
+
+if result.ok == true
+    display clear
+    display print text="POST OK" x=center y=0
+    log info "Heartbeat sent"
+end

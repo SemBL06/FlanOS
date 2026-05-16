@@ -1,0 +1,55 @@
+storage:
+  sd:
+    path: "/sd"
+    slot: 0
+    sck: 18
+    driver: "sd_spi"
+    baudrate: 1000000
+    cs: 17
+    miso: 16
+    mosi: 19
+RFIDandNFC:
+  GND: 4
+  SCL: 14
+  VCC: 10
+  SDA: 5
+output:
+input:
+  tank_height:
+    echo: "GP5"
+    trig: "GP4"
+    driver: "ultrasonic"
+    height_cm: 120
+system:
+  board: "generic"
+wifi:
+  SSID: ""
+  Password: ""
+comm:
+display:
+  oled_main:
+    driver: "oled"
+    sda: 4
+    scl: 5
+    address: "auto"
+    width: 128
+    height: 64
+    freq: 100000
+buttons:
+  left: 0
+  right: 1
+  buttons_active_low: true
+  down: 3
+  up: 2
+drivers:
+  path: "/sd/main/drivers"
+  enabled: true
+  allow_override: false
+  board: "generic"
+fetch:
+  updates_url: ""
+modules:
+  path: "/sd/main/modules"
+  enabled: true
+  allow_override: false
+  board: "generic"

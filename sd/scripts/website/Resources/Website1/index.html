@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puddinator Form</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Pudding Portal</h1>
+    <p>Fill in the fields below. Each field name is stored in the script's <code>data.yml</code>.</p>
+
+    <form method="POST" action="/submit" id="pudding-form">
+      <label for="pudding">Do you like pudding?</label>
+      <input id="pudding" name="pudding" type="text" placeholder="Of course I do!">
+
+      <label for="name">Give your name</label>
+      <input id="name" name="name" type="text" placeholder="Sem">
+
+      <fieldset class="group">
+        <legend>What texture do you prefer?</legend>
+        <label class="inline-option">
+          <input type="radio" name="texture" value="smooth" checked>
+          Smooth
+        </label>
+        <label class="inline-option">
+          <input type="radio" name="texture" value="chunky">
+          Chunky
+        </label>
+      </fieldset>
+
+      <label for="kindofpudding">What kind of pudding do you like?</label>
+      <select id="kindofpudding" name="kindofpudding">
+        <option value="vanilla">Vanilla</option>
+        <option value="chocolate">Chocolate</option>
+        <option value="caramel">Caramel</option>
+        <option value="banana">Banana</option>
+      </select>
+
+      <label for="likeness">How much do you like pudding? <span id="likeness-value">50</span></label>
+      <input id="likeness" name="likeness" type="range" min="0" max="100" value="50">
+
+      <fieldset class="group">
+        <legend>Which toppings do you want?</legend>
+        <label class="inline-option">
+          <input type="checkbox" name="toppings" value="sprinkles" checked>
+          Sprinkles
+        </label>
+        <label class="inline-option">
+          <input type="checkbox" name="toppings" value="cream">
+          Cream
+        </label>
+        <label class="inline-option">
+          <input type="checkbox" name="toppings" value="cherries" checked>
+          Cherries
+        </label>
+      </fieldset>
+
+      <label for="favoriteflavors">Pick multiple favorite flavors</label>
+      <select id="favoriteflavors" name="favoriteflavors" multiple size="4">
+        <option value="vanilla" selected>Vanilla</option>
+        <option value="chocolate">Chocolate</option>
+        <option value="banana" selected>Banana</option>
+        <option value="caramel">Caramel</option>
+      </select>
+
+      <button type="submit">Save</button>
+      <p id="status" class="status"></p>
+    </form>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>

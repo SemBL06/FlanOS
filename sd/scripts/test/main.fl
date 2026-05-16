@@ -1,0 +1,45 @@
+# Author: Sem Block
+# Description: Basic test script
+
+display print text="Starting test" x=0 y=0
+
+set scan to (comm wifi scan)
+
+foreach wifi in scan
+    set name to (comm wifi get value=ssid network=wifi)
+    display print text=name
+end
+
+set test to (math add a=1 b=2)
+
+log info (string concat a="Result: " b=test)
+
+set selected to (ui options list=scan field=ssid selected=0)
+ui description text=selected
+
+# set devices to (comm bluetooth scan)
+# set picked to (ui options list=devices field=name selected=0)
+# ui description text=picked
+
+
+# if 1 == 1
+#    log info "IF works!"
+# end
+
+# on system start
+#    log info "System started event triggered"
+# end
+
+# Save RFID IDs
+
+# set id to 12345
+# data append file="data" path="rfid.ids" value=id
+
+# set id to 67890
+# data append file="data" path="rfid.ids" value=id
+
+# data get file="data" path="rfid.ids"
+
+# foreach tag in 1-3
+#    display print text="Found tag"
+# end

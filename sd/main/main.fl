@@ -1,0 +1,31 @@
+display print text="Flan OS" x=0 y=0
+set scripts to (system scripts)
+if display available
+    controls reset
+    set launch to ""
+    set selected to (ui options list=scripts field=name selected=0 right=continue)
+    while on
+        set selected to (ui options right=continue)
+        if (ui action) == "select"
+            set launch to selected
+            log info "Launching {launch.path}"
+            stop
+        end
+        if (controls pressed state=right)
+            set launch to selected
+            log info "Launching {launch.path}"
+            stop
+        end
+        if (controls pressed state=left)
+            set launch to selected
+            log info "Launching {launch.path}"
+            stop
+        end
+        system sleep 80
+    end
+    if launch
+        system run launch
+    end
+else
+    log warn "No display available; boot menu skipped"
+end

@@ -1,0 +1,11 @@
+set distance_cm to (input get tank_height option=cm)
+set water_height_cm to (input get tank_height option=height)
+
+display clear
+display print text="Distance cm:" x=0 y=0
+display print text="{distance_cm}" x=0 y=1
+display print text="Height cm:" x=0 y=2
+display print text="{water_height_cm}" x=0 y=3
+
+log info "Distance cm: {distance_cm}"
+log info "Height cm: {water_height_cm}"

@@ -1,0 +1,3 @@
+website start port=8080 website=Website1
+log info (string concat a="Website status: " b=(website status))
+log info (string concat a="Website IP: " b=(website get ip))

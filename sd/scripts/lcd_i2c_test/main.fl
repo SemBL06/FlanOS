@@ -1,0 +1,5 @@
+display clear
+display print text="FlanLang LCD" x=0 y=0
+display print text="SDA GP0 SCL GP1" x=0 y=1
+display print text="Status: {lcd_i2c.status}" x=0 y=2
+log info (string concat a="LCD mode: " b=(lcd_i2c get status))
