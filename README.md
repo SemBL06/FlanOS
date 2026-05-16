@@ -7,7 +7,8 @@ FlanOS is an operating system build around the programming language Flanlang. It
 Check the documentation to see all the features!
 
 ## Documentation
-[Here](https://flanos.forageek.com/) Build with [SSG](https://github.com/SemBL06/SSG)!
+[Here](https://flanos.forageek.com/)  
+Build with [SSG](https://github.com/SemBL06/SSG)!
 
 # Future
 - Maybe a website to download specific drivers, scripts or modules? 
